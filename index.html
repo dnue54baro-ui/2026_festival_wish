@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>2026 대구교육대학교 상록대동제 : 바람</title>
+  <meta name="description" content="2026 대구교육대학교 상록대동제 [바람] 공식 모바일 안내 가이드" />
+
+  <!-- 외부 CDN: Tailwind CSS & Google Fonts & Pretendard -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Gaegu:wght@700&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+    }
+    .font-poster-brush {
+      font-family: 'Nanum Brush Script', 'Gaegu', cursive;
+    }
+    .font-poster-eng {
+      font-family: 'Caveat', cursive, serif;
+    }
+    /* 스크롤바 숨김 처리 */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen antialiased selection:bg-emerald-500 selection:text-white flex flex-col justify-between">
+
+  <!-- 상단 헤더 -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm transition-all">
+    <div class="max-w-md sm:max-w-4xl mx-auto px-4 h-14 flex items-center justify-between gap-2">
+      <button onclick="showView('home')" class="flex items-center gap-2 min-w-0 text-left active:opacity-80">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+        <h1 class="text-xs sm:text-base font-black text-slate-900 whitespace-nowrap truncate">
+          <span>2026 대구교육대학교 상록대동제 : 바람</span>
+        </h1>
+      </button>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <!-- 찜 및 예산 계산기 모달 오픈 버튼 -->
+        <button id="btn-open-favs" class="flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100 text-rose-600 rounded-xl text-xs font-bold border border-rose-200 transition active:scale-95 shadow-sm">
+          <span class="text-rose-500">♥</span>
+          <span class="whitespace-nowrap">찜 & 예산</span>
+          <span id="fav-count-badge" class="ml-0.5 px-1.5 py-0.2 bg-rose-500 text-white text-[10px] font-black rounded-full hidden">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 컨텐츠 영역 -->
+  <div class="w-full flex-1">
+
+    <!-- ==================== VIEW 1: 메인 홈 화면 ==================== -->
+    <main id="view-home" class="max-w-md mx-auto px-4 py-6 space-y-6 min-h-[78vh] flex flex-col justify-center items-center">
+      
+      <!-- 메인 비주얼 화이트 카드 -->
+      <div class="w-full bg-white rounded-3xl p-6 shadow-xl border border-emerald-100 text-center space-y-6 relative overflow-hidden">
+        <!-- 배경 그래픽 데코 -->
+        <div class="absolute -top-12 -right-12 w-40 h-40 bg-emerald-100/60 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="absolute -bottom-12 -left-12 w-40 h-40 bg-sky-100/60 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="space-y-2 relative z-10">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 rounded-full px-3.5 py-1.5 shadow-xs">
+            <span>🍃 2026 상록대동제 모바일 가이드</span>
+          </div>
+          <p class="text-xs font-bold text-slate-400 tracking-wider uppercase pt-1">대구교육대학교</p>
+        </div>
+
+        <!-- 중앙 타이틀 -->
+        <div class="py-4 space-y-3 relative z-10">
+          <h2 class="text-2xl font-black text-slate-900 tracking-tight leading-tight">
+            2026 상록대동제
+          </h2>
+          <div class="text-5xl font-black text-emerald-600 font-poster-brush tracking-wide flex items-center justify-center gap-2">
+            <span>바 람</span>
+            <span class="text-3xl text-emerald-500">🍃</span>
+          </div>
+          <p class="text-xs text-slate-500 font-medium pt-1">
+            2026. 10. 14 (수) ~ 10. 15 (목)
+          </p>
+        </div>
+
+        <!-- 메인 화면 메뉴 버튼 바로가기들 -->
+        <div class="space-y-2.5 pt-2 relative z-10">
+          <button onclick="goToDetailsTab('pubs')" class="w-full py-4 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm transition shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 active:scale-[0.98]">
+            <span>🎪 14개 학과 주막 & 메뉴 보기</span>
+          </button>
+
+          <button onclick="goToDetailsTab('map')" class="w-full py-3.5 px-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition shadow-md flex items-center justify-center gap-2 active:scale-[0.98]">
+            <span>🗺️ 캠퍼스 부스 배치도 확인</span>
+          </button>
+
+          <div class="grid grid-cols-3 gap-2 pt-1">
+            <button onclick="goToDetailsTab('foodtrucks')" class="py-3 px-2 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-900 font-bold text-xs flex flex-col items-center justify-center gap-1 active:scale-95 shadow-xs">
+              <span class="text-base">🚚</span>
+              <span>푸드트럭</span>
+              <span class="text-[9px] text-amber-700 font-mono">11:30~21:50</span>
+            </button>
+            <button onclick="goToDetailsTab('schedule')" class="py-3 px-2 rounded-xl bg-sky-50 hover:bg-sky-100 border border-sky-200 text-sky-900 font-bold text-xs flex flex-col items-center justify-center gap-1 active:scale-95 shadow-xs">
+              <span class="text-base">🕒</span>
+              <span>타임테이블</span>
+              <span class="text-[9px] text-sky-700 font-mono">축제 일정</span>
+            </button>
+            <button onclick="goToDetailsTab('restrooms')" class="py-3 px-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-900 font-bold text-xs flex flex-col items-center justify-center gap-1 active:scale-95 shadow-xs">
+              <span class="text-base">🚻</span>
+              <span>화장실 안내</span>
+              <span class="text-[9px] text-emerald-700 font-mono">개방 화장실</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ==================== VIEW 2: 축제 상세 안내 페이지 ==================== -->
+    <main id="view-details" class="max-w-md mx-auto px-4 py-4 space-y-5 hidden">
+
+      <!-- 상단 메인으로 돌아가기 바 -->
+      <div class="flex items-center justify-between bg-white p-3 rounded-2xl border border-slate-200 shadow-xs">
+        <button onclick="showView('home')" class="flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200 transition active:scale-95">
+          <span>← 메인 포스터 보기</span>
+        </button>
+        <span class="text-xs font-black text-slate-700">상록대동제 안내</span>
+      </div>
+
+      <!-- 세그먼트 탭 메뉴 -->
+      <div id="tab-nav-section" class="flex items-center justify-center overflow-x-auto pb-1 no-scrollbar">
+        <div class="inline-flex p-1 bg-slate-200/90 rounded-2xl border border-slate-300/80 gap-1 text-xs font-bold shadow-inner">
+          <button id="tab-btn-map" onclick="switchTab('map')" class="px-3 py-2 rounded-xl transition whitespace-nowrap bg-emerald-600 text-white font-black shadow-sm">현장 배치도</button>
+          <button id="tab-btn-pubs" onclick="switchTab('pubs')" class="px-3 py-2 rounded-xl transition whitespace-nowrap text-slate-600 hover:text-slate-900">과 주막 (14개)</button>
+          <button id="tab-btn-foodtrucks" onclick="switchTab('foodtrucks')" class="px-3 py-2 rounded-xl transition whitespace-nowrap text-slate-600 hover:text-slate-900">푸드트럭 (4대)</button>
+          <button id="tab-btn-restrooms" onclick="switchTab('restrooms')" class="px-3 py-2 rounded-xl transition whitespace-nowrap text-slate-600 hover:text-slate-900">화장실 안내</button>
+          <button id="tab-btn-schedule" onclick="switchTab('schedule')" class="px-3 py-2 rounded-xl transition whitespace-nowrap text-slate-600 hover:text-slate-900">축제 일정</button>
+        </div>
+      </div>
+
+      <!-- 탭 1: 캠퍼스 현장 배치도 -->
+      <section id="tab-pane-map" class="space-y-4">
+        <div class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">🗺️</span>
+              <div>
+                <h2 class="text-sm font-bold text-slate-900">상록 대동제 현장 부스 배치도</h2>
+                <p class="text-[11px] text-slate-500">부스를 터치하면 상세 메뉴와 이벤트를 바로 확인하실 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-[11px] text-emerald-800 bg-emerald-50 p-2.5 rounded-xl border border-emerald-200 flex items-center justify-between font-medium">
+            <span>👉 좌우로 밀어서 부스와 무대 위치를 확인하세요</span>
+            <span class="font-mono text-[10px] text-emerald-700 font-bold bg-white px-2 py-0.5 rounded-full border border-emerald-200 shadow-xs">가로 스크롤</span>
+          </div>
+
+          <!-- 스크롤 가능 배치도 캔버스 -->
+          <div class="overflow-x-auto p-3 bg-slate-100 rounded-2xl border border-slate-200 scrollbar-thin">
+            <div class="min-w-[920px] p-4 bg-white rounded-xl border-2 border-slate-300 flex items-center gap-4 relative shadow-sm">
+              
+              <!-- 좌측 부스 및 무대 구역 -->
+              <div class="shrink-0 min-w-0">
+                
+                <!-- 상단열: 푸드트럭 ① -> 음 -> 특 -> 실 -> [중앙통로] -> 국 -> 미 -> 컴 -> 영 -> 사 -->
+                <div class="flex items-center gap-1.5 pb-3 border-b border-dashed border-slate-300">
+                  <span class="text-[11px] font-bold text-slate-500 w-12 text-center shrink-0">상단열</span>
+                  
+                  <!-- 푸드트럭 ZONE ① -->
+                  <div class="flex items-center gap-1.5 p-1 rounded-xl bg-amber-50 border border-amber-200 shrink-0">
+                    <button onclick="openBoothModal('foodtruck-1')" class="w-14 h-12 rounded-lg bg-amber-500 hover:bg-amber-400 text-white font-black text-[11px] flex flex-col items-center justify-center border border-amber-400 active:scale-95 shadow-sm"><span>서우푸드</span><span class="text-[8px] opacity-90 font-medium">닭꼬치</span></button>
+                    <button onclick="openBoothModal('foodtruck-2')" class="w-14 h-12 rounded-lg bg-amber-500 hover:bg-amber-400 text-white font-black text-[11px] flex flex-col items-center justify-center border border-amber-400 active:scale-95 shadow-sm"><span>대감님댁</span><span class="text-[8px] opacity-90 font-medium">닭강정</span></button>
+                  </div>
+
+                  <div class="h-8 w-px bg-slate-300 mx-0.5 shrink-0"></div>
+
+                  <!-- 음, 특, 실 -->
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    <button onclick="openBoothModal('pub-music')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>음</span><span class="text-[8px] opacity-90 font-medium">음악</span></button>
+                    <button onclick="openBoothModal('pub-special-ed')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>특</span><span class="text-[8px] opacity-90 font-medium">특수통합</span></button>
+                    <button onclick="openBoothModal('pub-practical-arts')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>실</span><span class="text-[8px] opacity-90 font-medium">실과</span></button>
+                  </div>
+
+                  <!-- 중앙 통로 -->
+                  <div class="mx-1 px-2 py-1 bg-slate-100 rounded-lg border border-slate-300 flex flex-col items-center justify-center shrink-0">
+                    <div class="space-y-1"><div class="w-4 h-1 bg-slate-400 rounded-full"></div><div class="w-4 h-1 bg-slate-400 rounded-full"></div></div>
+                    <span class="text-[8px] text-slate-500 mt-0.5 font-mono font-bold">통로</span>
+                  </div>
+
+                  <!-- 국, 미, 컴, 영, 사 -->
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    <button onclick="openBoothModal('pub-korean')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>국</span><span class="text-[8px] opacity-90 font-medium">국어</span></button>
+                    <button onclick="openBoothModal('pub-fine-arts')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>미</span><span class="text-[8px] opacity-90 font-medium">미술</span></button>
+                    <button onclick="openBoothModal('pub-computer')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>컴</span><span class="text-[8px] opacity-90 font-medium">컴퓨터</span></button>
+                    <button onclick="openBoothModal('pub-english')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>영</span><span class="text-[8px] opacity-90 font-medium">영어</span></button>
+                    <button onclick="openBoothModal('pub-social')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>사</span><span class="text-[8px] opacity-90 font-medium">사회과</span></button>
+                  </div>
+                </div>
+
+                <!-- 중앙 테이블 구역 -->
+                <div class="flex items-center justify-between text-xs py-2 px-4 my-2 bg-emerald-50/90 rounded-xl border border-emerald-200">
+                  <span class="flex items-center gap-1.5 font-bold text-emerald-900"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>중앙 테이블 좌석</span>
+                  <span class="text-xs font-bold text-pink-700 bg-pink-100 px-2.5 py-0.5 rounded-full border border-pink-300">총학비 납부자 ZONE</span>
+                </div>
+
+                <!-- 하단열: 푸드트럭 ② -> 과 -> 윤 -> 교 -> 수 -> 체(하단 쓰레기장) -> 중집 -> 남구청 -> 본부 -> 팔찌 -->
+                <div class="flex items-start gap-1.5 pt-3 border-t border-dashed border-slate-300">
+                  <span class="text-[11px] font-bold text-slate-500 w-12 text-center shrink-0 pt-3">하단열</span>
+
+                  <!-- 푸드트럭 ZONE ② -->
+                  <div class="flex items-center gap-1.5 p-1 rounded-xl bg-amber-50 border border-amber-200 shrink-0">
+                    <button onclick="openBoothModal('foodtruck-3')" class="w-14 h-12 rounded-lg bg-amber-500 hover:bg-amber-400 text-white font-black text-[11px] flex flex-col items-center justify-center border border-amber-400 active:scale-95 shadow-sm"><span>써니푸드</span><span class="text-[8px] opacity-90 font-medium">새우/타코</span></button>
+                    <button onclick="openBoothModal('foodtruck-4')" class="w-14 h-12 rounded-lg bg-amber-500 hover:bg-amber-400 text-white font-black text-[11px] flex flex-col items-center justify-center border border-amber-400 active:scale-95 shadow-sm"><span>정성푸드</span><span class="text-[8px] opacity-90 font-medium">초밥</span></button>
+                  </div>
+
+                  <div class="h-8 w-px bg-slate-300 mx-0.5 shrink-0 self-center"></div>
+
+                  <!-- 과, 윤, 교, 수 -->
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    <button onclick="openBoothModal('pub-science')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>과</span><span class="text-[8px] opacity-90 font-medium">과학</span></button>
+                    <button onclick="openBoothModal('pub-ethics')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>윤</span><span class="text-[8px] opacity-90 font-medium">윤리</span></button>
+                    <button onclick="openBoothModal('pub-education')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>교</span><span class="text-[8px] opacity-90 font-medium">교육</span></button>
+                    <button onclick="openBoothModal('pub-math')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>수</span><span class="text-[8px] opacity-90 font-medium">수학</span></button>
+                  </div>
+
+                  <!-- 체(하단 쓰레기/음식물 처리장 표기 연장) -->
+                  <div class="flex flex-col items-center gap-1 shrink-0">
+                    <button onclick="openBoothModal('pub-pe')" class="w-12 h-12 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-500 active:scale-95 shadow-sm"><span>체</span><span class="text-[8px] opacity-90 font-medium">체육</span></button>
+                    <!-- 연장 공간: 쓰레기/음식물 처리장 -->
+                    <button onclick="openBoothModal('facility-trash')" class="w-14 py-1 rounded bg-slate-700 hover:bg-slate-600 text-white text-[8px] font-bold text-center border border-slate-500 active:scale-95 shadow-xs whitespace-nowrap">
+                      🗑️ 쓰레기/음식물
+                    </button>
+                  </div>
+
+                  <!-- 중집, 남구청, 본부 부스 -->
+                  <div class="flex items-center gap-1.5 shrink-0">
+                    <button onclick="openBoothModal('pub-executive')" class="w-12 h-12 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex flex-col items-center justify-center border border-emerald-600 active:scale-95 shadow-sm"><span>중집</span><span class="text-[8px] opacity-90 font-medium">중집주막</span></button>
+                    <button onclick="openBoothModal('facility-namgu')" class="w-12 h-12 rounded-lg bg-purple-700 hover:bg-purple-600 text-white font-bold text-xs flex flex-col items-center justify-center border border-purple-600 active:scale-95 shadow-sm"><span>남구청</span><span class="text-[8px] opacity-90 font-medium">청년정책</span></button>
+                    <button onclick="openBoothModal('facility-hq')" class="w-14 h-12 rounded-lg bg-indigo-800 hover:bg-indigo-700 text-white font-bold text-xs flex flex-col items-center justify-center border border-indigo-700 active:scale-95 shadow-sm"><span>본부</span><span class="text-[8px] opacity-90 font-medium">운영본부</span></button>
+                  </div>
+
+                  <!-- 팔찌 배부처 -->
+                  <div class="shrink-0">
+                    <button onclick="openBoothModal('facility-wristband')" class="w-14 h-12 rounded-lg bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs flex flex-col items-center justify-center border border-pink-400 active:scale-95 shadow-md">
+                      <span>팔찌</span><span class="text-[8px] opacity-90 font-medium">배부처</span>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- 핑크 통제선 -->
+              <div class="mx-1 flex flex-col items-center justify-center shrink-0 self-stretch z-10">
+                <div class="w-2.5 h-full min-h-[140px] bg-gradient-to-b from-pink-400 via-rose-500 to-pink-500 rounded-full shadow-[0_0_10px_rgba(244,63,94,0.4)]"></div>
+                <span class="text-[10px] font-bold text-pink-600 mt-1.5 whitespace-nowrap">통제선</span>
+              </div>
+
+              <!-- 메인 무대 -->
+              <div class="shrink-0 flex items-center justify-center pl-1 pr-2 z-10">
+                <button onclick="openBoothModal('facility-stage')" class="w-20 h-32 rounded-xl bg-gradient-to-br from-fuchsia-600 to-purple-600 text-white font-black text-sm flex flex-col items-center justify-center border-2 border-fuchsia-300 shadow-md active:scale-95">
+                  <span class="text-xl">🎤</span>
+                  <span>메인</span>
+                  <span>무대</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 탭 2: 14개 학과 & 중집 주막 목록 -->
+      <section id="tab-pane-pubs" class="space-y-3 hidden">
+        <div class="flex items-center justify-between pb-1">
+          <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <span>🎪 14개 학과 & 중집 주막 안내</span>
+          </h2>
+          <span class="text-xs text-emerald-700 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">18:30 오픈</span>
+        </div>
+        <div id="pubs-list-container" class="space-y-3">
+          <!-- JS 렌더링 -->
+        </div>
+      </section>
+
+      <!-- 탭 3: 푸드트럭 4대 목록 -->
+      <section id="tab-pane-foodtrucks" class="space-y-3 hidden">
+        <div class="pb-1">
+          <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <span>🚚 푸드트럭 존 (총 4대)</span>
+          </h2>
+          <p class="text-xs text-slate-500">운영시간: 오전 11:30 ~ 21:50 | 주차장 입구 측면 위치</p>
+        </div>
+        <div id="foodtrucks-list-container" class="space-y-3">
+          <!-- JS 렌더링 -->
+        </div>
+      </section>
+
+      <!-- 탭 4: 화장실 안내 -->
+      <section id="tab-pane-restrooms" class="space-y-3 hidden">
+        <div class="pb-1">
+          <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <span>🚻 축제 이용 가능 화장실</span>
+          </h2>
+        </div>
+
+        <div class="space-y-2.5">
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
+            <h3 class="font-bold text-slate-900 text-sm">상록 교육관 화장실</h3>
+            <span class="text-[11px] px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">사용 가능</span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
+            <h3 class="font-bold text-slate-900 text-sm">상록 예술관 1층 화장실</h3>
+            <span class="text-[11px] px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">사용 가능</span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
+            <h3 class="font-bold text-slate-900 text-sm">상록 라운지 화장실</h3>
+            <span class="text-[11px] px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">사용 가능</span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
+            <h3 class="font-bold text-slate-900 text-sm">체육관 1층 화장실</h3>
+            <span class="text-[11px] px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">사용 가능</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 탭 5: 축제 일정표 -->
+      <section id="tab-pane-schedule" class="space-y-4 hidden">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+          <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-2">
+            <span>🕒 2026 상록대동제 [바람] 타임테이블</span>
+          </h2>
+          
+          <div class="space-y-6">
+            <!-- Day 1 -->
+            <div class="border-l-4 border-emerald-500 pl-3 sm:pl-4 py-1 space-y-3 bg-emerald-50/40 rounded-r-2xl border-y border-r border-emerald-100 p-3.5">
+              <div class="font-extrabold text-sm text-emerald-900 flex items-center justify-between">
+                <span>Day 1 : 2026. 10. 14 (수)</span>
+                <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">1일차</span>
+              </div>
+              
+              <!-- 주간 기본 일정 -->
+              <div class="text-xs space-y-1.5 text-slate-700 bg-white/80 p-2.5 rounded-xl border border-emerald-100/80">
+                <div class="flex items-center justify-between"><span class="font-mono text-slate-500 font-medium">10:00 - 17:00</span><span class="font-semibold text-slate-800">학과별 주간 체험 부스 & 버스킹</span></div>
+                <div class="flex items-center justify-between"><span class="font-mono text-slate-500 font-medium">17:00 - 18:30</span><span class="text-amber-800 font-semibold">주막 오픈 준비 및 브레이크 타임</span></div>
+                <div class="flex items-center justify-between font-bold text-emerald-950"><span class="font-mono text-emerald-700">18:30 - 24:00</span><span>14개 학과 야간 주막 & 푸드트럭 운영</span></div>
+              </div>
+
+              <!-- 1일차 무대 타임 테이블 -->
+              <div class="space-y-1.5 pt-1">
+                <div class="text-[11px] font-bold text-emerald-900 flex items-center gap-1">
+                  <span>🎤 메인 무대 공연 타임테이블</span>
+                </div>
+                <div class="space-y-1 text-xs">
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-emerald-200/60 shadow-2xs">
+                    <span class="font-medium text-emerald-900 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>MC 오프닝 - 규태씨</span>
+                    <span class="font-mono text-slate-600 text-[11px] font-bold">19:00 ~ 19:05</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>와우</span>
+                    <span class="font-mono text-slate-600 text-[11px]">19:05 ~ 19:10</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>EDS</span>
+                    <span class="font-mono text-slate-600 text-[11px]">19:10 ~ 19:15</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>미술과</span>
+                    <span class="font-mono text-slate-600 text-[11px]">19:15 ~ 19:20</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-amber-50 border border-amber-200 shadow-2xs">
+                    <span class="font-bold text-amber-900 flex items-center gap-1.5">🎭 복면가요제</span>
+                    <span class="font-mono text-amber-800 text-[11px] font-bold">19:20 ~ 20:20</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>SLATT</span>
+                    <span class="font-mono text-slate-600 text-[11px]">20:20 ~ 20:50</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>BE</span>
+                    <span class="font-mono text-slate-600 text-[11px]">20:50 ~ 21:20</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white shadow-sm font-bold">
+                    <span class="flex items-center gap-1.5"><span class="text-amber-300">⭐</span>초대 가수 공연 - 한동근</span>
+                    <span class="font-mono text-purple-100 text-[11px]">21:20 ~</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="border-l-4 border-sky-500 pl-3 sm:pl-4 py-1 space-y-3 bg-sky-50/40 rounded-r-2xl border-y border-r border-sky-100 p-3.5">
+              <div class="font-extrabold text-sm text-sky-900 flex items-center justify-between">
+                <span>Day 2 : 2026. 10. 15 (목)</span>
+                <span class="text-[10px] bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full font-bold">2일차</span>
+              </div>
+              
+              <!-- 주간 기본 일정 -->
+              <div class="text-xs space-y-1.5 text-slate-700 bg-white/80 p-2.5 rounded-xl border border-sky-100/80">
+                <div class="flex items-center justify-between"><span class="font-mono text-slate-500 font-medium">10:00 - 17:00</span><span class="font-semibold text-slate-800">낮 부스 참여</span></div>
+                <div class="flex items-center justify-between font-bold text-sky-950"><span class="font-mono text-sky-700">18:30 - 24:00</span><span>14개 학과 야간 주막 & 푸드트럭 운영</span></div>
+              </div>
+
+              <!-- 2일차 무대 타임 테이블 -->
+              <div class="space-y-1.5 pt-1">
+                <div class="text-[11px] font-bold text-sky-900 flex items-center gap-1">
+                  <span>🎤 메인 무대 공연 타임테이블</span>
+                </div>
+                <div class="space-y-1 text-xs">
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>EBS</span>
+                    <span class="font-mono text-slate-600 text-[11px]">18:30 ~ 19:00</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-sky-100/80 border border-sky-200">
+                    <span class="font-bold text-sky-900 flex items-center gap-1.5">🎁 이벤트</span>
+                    <span class="font-mono text-sky-800 text-[11px] font-bold">19:00 ~ 19:15</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>크로키 X 임용 런어웨이 베이비</span>
+                    <span class="font-mono text-slate-600 text-[11px]">19:15 ~ 19:50</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>시셀파피</span>
+                    <span class="font-mono text-slate-600 text-[11px]">19:50 ~ 20:25</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                    <span class="font-medium text-slate-800 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>에버그린</span>
+                    <span class="font-mono text-slate-600 text-[11px]">20:25 ~ 21:00</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-sm font-bold">
+                    <span class="flex items-center gap-1.5"><span class="text-amber-300">⭐</span>초대 가수 공연 - 체리필터</span>
+                    <span class="font-mono text-pink-100 text-[11px]">21:00 ~</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-slate-900 text-white font-bold">
+                    <span class="flex items-center gap-1.5">🎆 폐막식</span>
+                    <span class="font-mono text-slate-300 text-[11px]">공연 직후</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- 하단 공통 문의 안내 푸터 -->
+  <footer class="w-full max-w-md mx-auto px-4 pb-8 pt-2">
+    <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm text-center space-y-2">
+      <div class="flex items-center justify-center gap-1.5 text-xs font-bold text-slate-800">
+        <span class="text-emerald-600">💬</span>
+        <span>축제 관련 문의 안내</span>
+      </div>
+      <p class="text-xs text-slate-600 font-medium leading-relaxed">
+        문의사항은 <strong class="text-slate-900 font-bold">운영 본부</strong>로 방문해 주시거나<br>아래 대표 번호로 연락 바랍니다.
+      </p>
+      <a href="tel:010-7512-2246" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs font-bold transition active:scale-95 shadow-2xs">
+        <span>📞 문의 전화: 010-7512-2246</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- 상세 정보 팝업 모달 (밝은 테마) -->
+  <div id="booth-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 hidden" onclick="closeModalOnBg(event)">
+    <div class="bg-white border border-slate-200 w-full max-w-lg rounded-t-3xl sm:rounded-3xl p-6 max-h-[85vh] overflow-y-auto space-y-4 shadow-2xl text-slate-900">
+      <div class="flex items-start justify-between">
+        <div>
+          <span id="modal-category-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">학과 주막</span>
+          <h3 id="modal-title" class="text-lg font-black text-slate-900 mt-1">부스 이름</h3>
+          <p id="modal-concept" class="text-xs text-emerald-700 font-semibold">컨셉 설명</p>
+        </div>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-700 text-xl p-1">✕</button>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">대표 메뉴 및 가격</h4>
+        <div id="modal-menu-list" class="space-y-1.5"></div>
+      </div>
+
+      <div id="modal-event-box" class="p-3.5 rounded-xl bg-emerald-50/80 border border-emerald-200 text-xs space-y-1 text-emerald-950">
+        <span class="font-bold text-emerald-800 flex items-center gap-1">🎉 특별 이벤트 & 혜택</span>
+        <p id="modal-event-desc" class="text-emerald-900 font-medium whitespace-pre-line">이벤트 내용</p>
+      </div>
+
+      <div class="flex items-center justify-between pt-2">
+        <button id="modal-fav-btn" onclick="toggleModalFav()" class="flex-1 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-2 border border-slate-300 transition active:scale-95">
+          <span id="modal-fav-icon">🤍</span>
+          <span id="modal-fav-text">부스 전체 찜하기</span>
+        </button>
+        <button onclick="closeModal()" class="ml-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs transition active:scale-95 shadow-sm">
+          확인
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 찜 목록 팝업 모달 (밝은 테마) -->
+  <div id="fav-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 hidden" onclick="closeFavModalOnBg(event)">
+    <div class="bg-white border border-slate-200 w-full max-w-md rounded-t-3xl sm:rounded-3xl p-6 max-h-[80vh] overflow-y-auto space-y-4 shadow-2xl text-slate-900">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h3 class="font-black text-base text-slate-900 flex items-center gap-2">
+          <span class="text-rose-500">♥</span>
+          <span>내가 찜한 부스 & 메뉴</span>
+        </h3>
+        <button onclick="closeFavModal()" class="text-slate-400 hover:text-slate-700 text-lg">✕</button>
+      </div>
+
+      <!-- 서브 탭 버튼 -->
+      <div class="flex bg-slate-100 p-1 rounded-xl text-xs font-bold">
+        <button id="fav-tab-btn-menus" onclick="switchFavTab('menus')" class="flex-1 py-2 rounded-lg bg-white shadow-xs text-emerald-800 font-black">
+          메뉴별 찜, 예상가격 계산기
+        </button>
+        <button id="fav-tab-btn-booths" onclick="switchFavTab('booths')" class="flex-1 py-2 rounded-lg text-slate-600 hover:text-slate-900">
+          찜한 부스
+        </button>
+      </div>
+
+      <!-- 탭 A: 메뉴별 찜 & 예산 계산기 -->
+      <div id="fav-tab-pane-menus" class="space-y-3">
+        <div id="fav-menu-items-container" class="space-y-2 max-h-[40vh] overflow-y-auto pr-1">
+          <!-- JS 렌더링 -->
+        </div>
+
+        <!-- 예산 총계 카드 -->
+        <div class="p-3.5 bg-emerald-50 rounded-2xl border border-emerald-200 space-y-2 text-xs">
+          <div class="flex items-center justify-between font-medium text-emerald-900">
+            <span>선택한 메뉴 수</span>
+            <span id="fav-total-count" class="font-bold font-mono">0개</span>
+          </div>
+          <div class="flex items-center justify-between text-sm font-black text-emerald-950 border-t border-emerald-200/80 pt-2">
+            <span>총 예상 금액</span>
+            <span id="fav-total-price" class="text-base font-black text-emerald-600 font-mono">0원</span>
+          </div>
+        </div>
+
+        <button onclick="copyBudgetList(event)" class="w-full py-3 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-emerald-900 font-bold text-xs flex items-center justify-center gap-1.5 border border-emerald-300 transition active:scale-95">
+          <span>📋 예산 리스트 복사하기</span>
+        </button>
+      </div>
+
+      <!-- 탭 B: 찜한 부스 목록 -->
+      <div id="fav-tab-pane-booths" class="space-y-2 hidden">
+        <div id="fav-booth-items-container" class="space-y-2 max-h-[40vh] overflow-y-auto pr-1"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 바닐라 자바스크립트 실행 로직 -->
+  <script>
+    const BOOTHS = [
+      // 1. 중집: 바룡
+      {
+        id: "pub-executive",
+        name: "중앙집행위원회 주막",
+        shortName: "중집",
+        concept: "바룡",
+        menus: [
+          { name: "메인세트(우동/샹궈 택1) + 계란볶음밥", price: "14,000원", numericPrice: 14000 },
+          { name: "계란볶음밥", price: "5,900원", numericPrice: 5900 },
+          { name: "볶음우동", price: "8,900원", numericPrice: 8900 },
+          { name: "마라샹궈", price: "8,900원", numericPrice: 8900 },
+          { name: "망고사고", price: "4,900원", numericPrice: 4900 }
+        ],
+        event: "세트 메뉴 주문 시 소룡, 자청룡, 해룡 랜덤 쿠폰(선착순 60팀)"
+      },
+      // 2. 국어교육과: 씨네마
+      {
+        id: "pub-korean",
+        name: "국어교육과 주막",
+        shortName: "국",
+        concept: "씨네마",
+        menus: [
+          { name: "김치우동(+어묵꼬치2개)", price: "7,000원", numericPrice: 7000 },
+          { name: "감자튀김(버터갈릭/치즈/칠리)", price: "3,000원", numericPrice: 3000 },
+          { name: "쏘야", price: "5,000원", numericPrice: 5000 },
+          { name: "닭껍질 튀김", price: "4,500원", numericPrice: 4500 },
+          { name: "치즈스틱(4개)", price: "3,000원", numericPrice: 3000 },
+          { name: "나쵸(버터갈릭/치즈/칠리)", price: "3,500원", numericPrice: 3500 },
+          { name: "아이스크림 꿀호떡", price: "4,000원", numericPrice: 4000 },
+          { name: "콜라/사이다", price: "1,000원", numericPrice: 1000 },
+          { name: "에이드(청포도/복숭아)", price: "2,000원", numericPrice: 2000 }
+        ],
+        event: "넷플릭스 초성게임, 영화팅, 국어과 태그 이벤트\n(초성게임 성공, 국어과 태그 각각 뽑기 1번)"
+      },
+      // 3. 실과교육과: 환승연애
+      {
+        id: "pub-practical-arts",
+        name: "실과교육과 주막",
+        shortName: "실",
+        concept: "환승연애",
+        menus: [
+          { name: "김치전 / 부추전 / 감자전", price: "7,000원", numericPrice: 7000 },
+          { name: "치즈계란말이 / 명란계란말이", price: "6,000원", numericPrice: 6000 },
+          { name: "설탕토마토", price: "4,000원", numericPrice: 4000 },
+          { name: "소떡소떡", price: "4,000원", numericPrice: 4000 },
+          { name: "콜라 / 사이다", price: "1,000원", numericPrice: 1000 }
+        ],
+        event: "랜덤인스타팅, 스텝을 이겨라, 뽑기판"
+      },
+      // 4. 특수통합교육과: 야구
+      {
+        id: "pub-special-ed",
+        name: "특수통합교육과 주막",
+        shortName: "특",
+        concept: "야구",
+        menus: [
+          { name: "특볶이", price: "5,000원", numericPrice: 5000 },
+          { name: "어묵탕", price: "4,000원", numericPrice: 4000 },
+          { name: "핫도그", price: "4,000원", numericPrice: 4000 },
+          { name: "뻥스크림", price: "3,500원", numericPrice: 3500 }
+        ],
+        event: "메뉴 1개 이상 주문 시 해시태그, 스트라이크 존, 룰렛 돌리기 가능"
+      },
+      // 5. 수학교육과: 1988 레트로
+      {
+        id: "pub-math",
+        name: "수학교육과 주막",
+        shortName: "수",
+        concept: "1988 레트로",
+        menus: [
+          { name: "불고기", price: "7,900원", numericPrice: 7900 },
+          { name: "콘치즈불닭볶음면", price: "5,900원", numericPrice: 5900 },
+          { name: "짜계치", price: "5,900원", numericPrice: 5900 },
+          { name: "초코바나나크로플", price: "4,500원", numericPrice: 4500 },
+          { name: "쫀디기", price: "1,000원", numericPrice: 1000 },
+          { name: "코카콜라", price: "1,000원", numericPrice: 1000 },
+          { name: "공기밥", price: "1,000원", numericPrice: 1000 }
+        ],
+        event: "추억의 뽑기, 오목, 알까기, 신발던지기"
+      },
+      // 6. 윤리교육과: 윤리철학관
+      {
+        id: "pub-ethics",
+        name: "윤리교육과 주막",
+        shortName: "윤",
+        concept: "윤리철학관",
+        menus: [
+          { name: "대패삼겹비빔면", price: "7,000원", numericPrice: 7000 },
+          { name: "콘치즈불닭전", price: "6,000원", numericPrice: 6000 },
+          { name: "닭꼬치", price: "3,500원", numericPrice: 3500 },
+          { name: "아이스티", price: "1,500원", numericPrice: 1500 }
+        ],
+        event: "포토부스에서 폴라로이드 사진 찍기, 운세 사탕 뽑기"
+      },
+      // 7. 교육학과: 석기시대
+      {
+        id: "pub-education",
+        name: "교육학과 주막",
+        shortName: "교",
+        concept: "석기시대",
+        menus: [
+          { name: "치즈불막창+주먹밥", price: "10,000원", numericPrice: 10000 },
+          { name: "떡갈비", price: "6,000원", numericPrice: 6000 },
+          { name: "체리에이드", price: "2,000원", numericPrice: 2000 }
+        ],
+        event: "풍선 터뜨리기"
+      },
+      // 8. 영어과교육과: 펍
+      {
+        id: "pub-english",
+        name: "영어과교육과 주막",
+        shortName: "영",
+        concept: "펍",
+        menus: [
+          { name: "버팔로윙 플레이트", price: "8,700원", numericPrice: 8700 },
+          { name: "보일링 씨푸드 파스타", price: "7,900원", numericPrice: 7900 },
+          { name: "미니 타코", price: "6,900원", numericPrice: 6900 },
+          { name: "맥앤치즈", price: "3,500원", numericPrice: 3500 },
+          { name: "오로라 칵테일", price: "4,500원", numericPrice: 4500 },
+          { name: "콜라/사이다", price: "1,000원", numericPrice: 1000 }
+        ],
+        event: "행운의 돌림판, 인스타팅"
+      },
+      // 9. 컴퓨터교육과: 컴교의 마블
+      {
+        id: "pub-computer",
+        name: "컴퓨터교육과 주막",
+        shortName: "컴",
+        concept: "컴교의 마블",
+        menus: [
+          { name: "지코바", price: "7,000원", numericPrice: 7000 },
+          { name: "마제소바", price: "6,500원", numericPrice: 6500 },
+          { name: "식빵팝콘", price: "3,000원", numericPrice: 3000 },
+          { name: "연유홍시", price: "2,000원", numericPrice: 2000 }
+        ],
+        event: "컴교의 마블, 10월 생일자 이벤트"
+      },
+      // 10. 음악교육과: F1
+      {
+        id: "pub-music",
+        name: "음악교육과 주막",
+        shortName: "음",
+        concept: "F1",
+        menus: [
+          { name: "제육볶음", price: "8,000원", numericPrice: 8000 },
+          { name: "볶음너구리 (소)", price: "3,500원", numericPrice: 3500 },
+          { name: "볶음너구리 (대)", price: "6,000원", numericPrice: 6000 },
+          { name: "참치마요주먹밥(8pcs)", price: "4,500원", numericPrice: 4500 },
+          { name: "공기밥", price: "1,500원", numericPrice: 1500 },
+          { name: "후르츠칵테일", price: "3,500원", numericPrice: 3500 },
+          { name: "하이볼", price: "2,500원", numericPrice: 2500 }
+        ],
+        event: "F1게임, 랜덤 음악매칭 이벤트, 방문록"
+      },
+      // 11. 미술교육과: 리센느(갸루 컨셉)
+      {
+        id: "pub-fine-arts",
+        name: "미술교육과 주막",
+        shortName: "미",
+        concept: "리센느(갸루 컨셉)",
+        menus: [
+          { name: "불닭오믈렛", price: "7,900원", numericPrice: 7900 },
+          { name: "고기숙주라면", price: "6,500원", numericPrice: 6500 },
+          { name: "염통꼬치(소 5개)", price: "1,900원", numericPrice: 1900 },
+          { name: "염통꼬치(대 10개)", price: "3,500원", numericPrice: 3500 },
+          { name: "마른안주", price: "4,500원", numericPrice: 4500 },
+          { name: "삼색 아이스크림", price: "2,000원", numericPrice: 2000 }
+        ],
+        event: "아투 스티커(타투 스티커), 아트 시그널(매칭 이벤트), 폴라로이드"
+      },
+      // 12. 과학교육과: 포켓몬스터
+      {
+        id: "pub-science",
+        name: "과학교육과 주막",
+        shortName: "과",
+        concept: "포켓몬스터",
+        menus: [
+          { name: "우삼겹순두부열찌개", price: "8,900원", numericPrice: 8900 },
+          { name: "피카츠&용가리", price: "8,000원", numericPrice: 8000 },
+          { name: "불닭냉면", price: "5,900원", numericPrice: 5900 },
+          { name: "쏘토닉", price: "3,000원", numericPrice: 3000 },
+          { name: "초코우유", price: "1,000원", numericPrice: 1000 },
+          { name: "라면땅", price: "3,500원", numericPrice: 3500 }
+        ],
+        event: "인스타 태그 , 도감 모으기(뽑기)"
+      },
+      // 13. 체육교육과: PEFA
+      {
+        id: "pub-pe",
+        name: "체육교육과 주막",
+        shortName: "체",
+        concept: "PEFA",
+        menus: [
+          { name: "대패두루치기+꼬마김밥 세트메뉴", price: "8,500원", numericPrice: 8500 },
+          { name: "골뱅이소면", price: "7,500원", numericPrice: 7500 },
+          { name: "두부김치", price: "3,900원", numericPrice: 3900 },
+          { name: "25CM 통인절미구이", price: "2,500원", numericPrice: 2500 }
+        ],
+        event: "인스타 태그(과비 납부자), 트래핑, 피파네컷"
+      },
+      // 14. 사회과교육과: 조선주막
+      {
+        id: "pub-social",
+        name: "사회과교육과 주막",
+        shortName: "사",
+        concept: "조선주막",
+        menus: [
+          { name: "닭갈비", price: "7,000원", numericPrice: 7000 },
+          { name: "쫄면&납작만두", price: "6,000원", numericPrice: 6000 },
+          { name: "옥수수전", price: "3,500원", numericPrice: 3500 },
+          { name: "아이스 연유망고", price: "2,500원", numericPrice: 2500 },
+          { name: "전통주", price: "3,000원", numericPrice: 3000 }
+        ],
+        event: "투호 던지기, 장터 속 범인을 찾아라"
+      },
+
+      // 푸드트럭들
+      {
+        id: "foodtruck-1",
+        name: "1. 서우푸드",
+        shortName: "서우푸드",
+        category: "foodtruck",
+        concept: "박재오 · 88더9342",
+        menus: [
+          { name: "닭꼬치", price: "5,000원", numericPrice: 5000 },
+          { name: "닭똥집튀김", price: "10,000원", numericPrice: 10000 },
+          { name: "소떡소떡", price: "4,000원", numericPrice: 4000 }
+        ],
+        event: "대표: 박재오 | 차량번호: 88더9342"
+      },
+      {
+        id: "foodtruck-2",
+        name: "2. 대감님댁가마솥닭강정",
+        shortName: "대감님댁",
+        category: "foodtruck",
+        concept: "김두원 · 97더5269",
+        menus: [
+          { name: "닭강정 (중)", price: "10,000원", numericPrice: 10000 },
+          { name: "닭강정 (대)", price: "16,000원", numericPrice: 16000 }
+        ],
+        event: "대표: 김두원 | 차량번호: 97더5269"
+      },
+      {
+        id: "foodtruck-3",
+        name: "3. 써니푸드",
+        shortName: "써니푸드",
+        category: "foodtruck",
+        concept: "강선희 · 986고9696",
+        menus: [
+          { name: "새우 (크림/칠리) [중]", price: "10,000원", numericPrice: 10000 },
+          { name: "새우 (크림/칠리) [대]", price: "15,000원", numericPrice: 15000 },
+          { name: "타코야끼 (8알)", price: "5,000원", numericPrice: 5000 }
+        ],
+        event: "대표: 강선희 | 차량번호: 986고9696"
+      },
+      {
+        id: "foodtruck-4",
+        name: "4. 정성푸드",
+        shortName: "정성푸드",
+        category: "foodtruck",
+        concept: "전준호 · 98러6024",
+        menus: [
+          { name: "연어초밥 (10p)", price: "13,000원", numericPrice: 13000 },
+          { name: "소고기초밥 (10p)", price: "12,000원", numericPrice: 12000 }
+        ],
+        event: "대표: 전준호 | 차량번호: 98러6024"
+      },
+
+      // 기타 시설
+      { 
+        id: "facility-namgu", 
+        name: "대구 남구청 청년정책 홍보관", 
+        shortName: "남구청", 
+        concept: "청년정책 홍보관", 
+        menus: [{ name: "남구청년센터 안내 리플렛 & 굿즈", price: "무료 배부", numericPrice: 0 }], 
+        event: "남구청년센터를 이겨라!\n팔로워 신청하면 게임 참여 가능 (승리 키링, 패배 사탕 증정)\n남구청년센터 소개 영상 상영 중" 
+      },
+      { 
+        id: "facility-hq", 
+        name: "상록대동제 운영본부", 
+        shortName: "본부", 
+        concept: "운영본부 및 종합 안내", 
+        menus: [
+          { name: "응급처치 구급상자 비치", price: "무료 지원", numericPrice: 0 },
+          { name: "분실물 신고 및 수령 센터", price: "상시 운영", numericPrice: 0 },
+          { name: "추파춥스 비대면 사탕 소개팅", price: "자유 참여", numericPrice: 0 }
+        ], 
+        event: "추파춥스 비대면 사탕 소개팅:\n사탕에 자신만의 멘트를 적거나, 적힌 멘트 중 마음에 드는 사탕을 골라보세요!" 
+      },
+      { 
+        id: "facility-wristband", 
+        name: "총학비 납부자 팔찌 배부처", 
+        shortName: "팔찌", 
+        concept: "총학비 납부자 확인처", 
+        menus: [{ name: "납부자 인증 전용 팔찌", price: "인증 후 수령", numericPrice: 0 }], 
+        event: null 
+      },
+      { 
+        id: "facility-stage", 
+        name: "상록대동제 메인 무대", 
+        shortName: "메인무대", 
+        concept: "공연 / 가요제 / 축하 무대", 
+        menus: [{ name: "무대 관람석", price: "자유 입장", numericPrice: 0 }], 
+        event: "매일 19:30 동아리 공연 및 초청 아티스트 공연 진행" 
+      },
+      {
+        id: "facility-trash",
+        name: "음식물 & 쓰레기 처리장",
+        shortName: "쓰레기장",
+        concept: "체육교육과 부스 아래쪽 위치",
+        menus: [{ name: "분리수거 및 쓰레기 배출", price: "자유 이용", numericPrice: 0 }],
+        event: "축제 환경 보호를 위해 쓰레기는 성숙하게 분리수거해 주세요!"
+      }
+    ];
+
+    let currentBoothId = null;
+    let favorites = []; // 부스 찜 ID 리스트
+    let favoriteMenus = []; // 메뉴 찜 항목 리스트 [{boothId, boothName, menuName, price, numericPrice, count}]
+
+    try {
+      favorites = JSON.parse(localStorage.getItem('festival_favs') || '[]');
+      favoriteMenus = JSON.parse(localStorage.getItem('festival_fav_menus') || '[]');
+    } catch(e) {}
+
+    // 뷰 전환 (home vs details)
+    function showView(viewId) {
+      const homeView = document.getElementById('view-home');
+      const detailsView = document.getElementById('view-details');
+      if (viewId === 'home') {
+        if (homeView) homeView.classList.remove('hidden');
+        if (detailsView) detailsView.classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        if (homeView) homeView.classList.add('hidden');
+        if (detailsView) detailsView.classList.remove('hidden');
+      }
+    }
+
+    function goToDetailsTab(tabId) {
+      showView('details');
+      switchTab(tabId);
+    }
+
+    function updateFavBadge() {
+      const badge = document.getElementById('fav-count-badge');
+      if (!badge) return;
+      const totalCount = favorites.length + favoriteMenus.length;
+      if (totalCount > 0) {
+        badge.innerText = totalCount;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    function switchTab(tabId) {
+      const tabs = ['map', 'pubs', 'foodtrucks', 'restrooms', 'schedule'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`tab-btn-${t}`);
+        const pane = document.getElementById(`tab-pane-${t}`);
+        if (btn && pane) {
+          if (t === tabId) {
+            btn.className = "px-3 py-2 rounded-xl transition whitespace-nowrap bg-emerald-600 text-white font-black shadow-sm";
+            pane.classList.remove('hidden');
+          } else {
+            btn.className = "px-3 py-2 rounded-xl transition whitespace-nowrap text-slate-600 hover:text-slate-900";
+            pane.classList.add('hidden');
+          }
+        }
+      });
+      const target = document.getElementById('tab-nav-section');
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function renderPubsList() {
+      const container = document.getElementById('pubs-list-container');
+      if (!container) return;
+      const pubs = BOOTHS.filter(b => b.id.startsWith('pub-'));
+      container.innerHTML = pubs.map(p => `
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:shadow-md transition space-y-2.5 shadow-sm">
+          <div onclick="openBoothModal('${p.id}')" class="flex items-center justify-between cursor-pointer">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 font-black text-xs flex items-center justify-center border border-emerald-300 shrink-0">${p.shortName}</span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm flex items-center flex-wrap gap-1.5">
+                  <span>${p.name}</span>
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-semibold">컨셉: ${p.concept}</span>
+                </h3>
+              </div>
+            </div>
+            <span class="text-xs text-emerald-700 font-mono font-semibold shrink-0">18:30 오픈</span>
+          </div>
+          
+          <div class="pl-10 space-y-1.5 pt-1">
+            ${p.menus.map(m => {
+              const isFav = isMenuFav(p.id, m.name);
+              const safeName = p.name.replace(/'/g, "\\'");
+              const safeMenuName = m.name.replace(/'/g, "\\'");
+              return `
+                <div class="flex items-center justify-between text-xs py-1.5 px-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                  <span class="font-medium text-slate-800">${m.name}</span>
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-emerald-700 font-mono">${m.price}</span>
+                    <button onclick="toggleMenuFav('${p.id}', '${safeName}', '${safeMenuName}', '${m.price}', ${m.numericPrice || 0})" class="p-1 rounded-lg text-xs hover:bg-slate-200 transition">
+                      ${isFav ? '❤️' : '🤍'}
+                    </button>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          ${p.event ? `<div onclick="openBoothModal('${p.id}')" class="pl-10 text-[11px] text-emerald-800 bg-emerald-50/80 p-2 rounded-xl border border-emerald-200/80 font-medium cursor-pointer">🎁 이벤트: ${p.event}</div>` : ''}
+        </div>
+      `).join('');
+    }
+
+    function renderFoodtrucksList() {
+      const container = document.getElementById('foodtrucks-list-container');
+      if (!container) return;
+      const trucks = BOOTHS.filter(b => b.id.startsWith('foodtruck-'));
+      container.innerHTML = trucks.map(t => `
+        <div onclick="openBoothModal('${t.id}')" class="p-4 rounded-2xl bg-white border border-slate-200 hover:border-amber-400 hover:shadow-md transition cursor-pointer space-y-2.5 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 font-black text-xs flex items-center justify-center border border-amber-300 shrink-0">${t.shortName}</span>
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm">${t.name}</h3>
+                <span class="text-[11px] text-amber-800 font-mono font-medium">${t.concept}</span>
+              </div>
+            </div>
+            <span class="text-xs text-amber-700 font-mono font-semibold shrink-0">11:30~21:50</span>
+          </div>
+          <div class="pl-10 flex flex-wrap gap-1.5">
+            ${t.menus.map(m => `<span class="px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200 text-[11px] font-semibold text-amber-950">${m.name} <strong class="text-amber-700 ml-1 font-mono">${m.price}</strong></span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openBoothModal(id) {
+      const item = BOOTHS.find(b => b.id === id);
+      if (!item) return;
+      currentBoothId = id;
+
+      const titleEl = document.getElementById('modal-title');
+      const conceptEl = document.getElementById('modal-concept');
+      const categoryBadge = document.getElementById('modal-category-badge');
+      const menuList = document.getElementById('modal-menu-list');
+      const eventBox = document.getElementById('modal-event-box');
+      const eventDesc = document.getElementById('modal-event-desc');
+      const modalEl = document.getElementById('booth-modal');
+
+      if (titleEl) titleEl.innerText = item.name;
+      if (conceptEl) conceptEl.innerText = item.concept || '';
+      
+      if (categoryBadge) {
+        if (item.id.startsWith('foodtruck')) {
+          categoryBadge.innerText = '푸드트럭';
+          categoryBadge.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-200';
+        } else if (item.id.startsWith('pub')) {
+          categoryBadge.innerText = '학과 & 중집 주막';
+          categoryBadge.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200';
+        } else {
+          categoryBadge.innerText = '행사장 시설';
+          categoryBadge.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-100 text-purple-800 border border-purple-200';
+        }
+      }
+
+      if (menuList) {
+        menuList.innerHTML = (item.menus || []).map(m => {
+          const isFav = isMenuFav(item.id, m.name);
+          const safeBoothName = item.name.replace(/'/g, "\\'");
+          const safeMenuName = m.name.replace(/'/g, "\\'");
+          return `
+            <div class="flex items-center justify-between text-xs py-2 px-3 bg-slate-50 rounded-xl border border-slate-200 text-slate-800">
+              <span class="font-medium text-slate-800">${m.name}</span>
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-emerald-700 font-mono">${m.price}</span>
+                <button onclick="toggleMenuFav('${item.id}', '${safeBoothName}', '${safeMenuName}', '${m.price}', ${m.numericPrice || 0})" class="px-2 py-1 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 font-bold transition">
+                  ${isFav ? '❤️ 찜됨' : '🤍 찜하기'}
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      if (eventBox) {
+        if (item.event) {
+          if (eventDesc) eventDesc.innerText = item.event;
+          eventBox.classList.remove('hidden');
+        } else {
+          eventBox.classList.add('hidden');
+        }
+      }
+
+      updateModalFavBtn();
+      if (modalEl) modalEl.classList.remove('hidden');
+    }
+
+    function updateModalFavBtn() {
+      const isFav = favorites.includes(currentBoothId);
+      const icon = document.getElementById('modal-fav-icon');
+      const text = document.getElementById('modal-fav-text');
+      if (icon) icon.innerText = isFav ? '❤️' : '🤍';
+      if (text) text.innerText = isFav ? '부스 찜 완료 (해제하기)' : '부스 전체 찜하기';
+    }
+
+    function toggleModalFav() {
+      if (!currentBoothId) return;
+      if (favorites.includes(currentBoothId)) {
+        favorites = favorites.filter(id => id !== currentBoothId);
+      } else {
+        favorites.push(currentBoothId);
+      }
+      saveFavorites();
+      updateFavBadge();
+      updateModalFavBtn();
+    }
+
+    function isMenuFav(boothId, menuName) {
+      return favoriteMenus.some(m => m.boothId === boothId && m.menuName === menuName);
+    }
+
+    function toggleMenuFav(boothId, boothName, menuName, price, numericPrice) {
+      const existingIndex = favoriteMenus.findIndex(m => m.boothId === boothId && m.menuName === menuName);
+      if (existingIndex >= 0) {
+        favoriteMenus.splice(existingIndex, 1);
+      } else {
+        favoriteMenus.push({
+          boothId,
+          boothName,
+          menuName,
+          price,
+          numericPrice: numericPrice || 0,
+          count: 1
+        });
+      }
+      saveFavorites();
+      updateFavBadge();
+      renderPubsList();
+      if (currentBoothId === boothId) {
+        openBoothModal(boothId);
+      }
+      renderFavMenuCalculator();
+    }
+
+    function updateMenuCount(boothId, menuName, delta) {
+      const item = favoriteMenus.find(m => m.boothId === boothId && m.menuName === menuName);
+      if (item) {
+        item.count = (item.count || 1) + delta;
+        if (item.count <= 0) {
+          favoriteMenus = favoriteMenus.filter(m => !(m.boothId === boothId && m.menuName === menuName));
+        }
+        saveFavorites();
+        updateFavBadge();
+        renderFavMenuCalculator();
+      }
+    }
+
+    function saveFavorites() {
+      try {
+        localStorage.setItem('festival_favs', JSON.stringify(favorites));
+        localStorage.setItem('festival_fav_menus', JSON.stringify(favoriteMenus));
+      } catch(e) {}
+    }
+
+    function closeModal() {
+      const modalEl = document.getElementById('booth-modal');
+      if (modalEl) modalEl.classList.add('hidden');
+    }
+    function closeModalOnBg(e) {
+      if (e.target.id === 'booth-modal') closeModal();
+    }
+
+    function switchFavTab(tab) {
+      const btnMenus = document.getElementById('fav-tab-btn-menus');
+      const btnBooths = document.getElementById('fav-tab-btn-booths');
+      const paneMenus = document.getElementById('fav-tab-pane-menus');
+      const paneBooths = document.getElementById('fav-tab-pane-booths');
+
+      if (tab === 'menus') {
+        if (btnMenus) btnMenus.className = 'flex-1 py-2 rounded-lg bg-white shadow-xs text-emerald-800 font-black';
+        if (btnBooths) btnBooths.className = 'flex-1 py-2 rounded-lg text-slate-600 hover:text-slate-900';
+        if (paneMenus) paneMenus.classList.remove('hidden');
+        if (paneBooths) paneBooths.classList.add('hidden');
+      } else {
+        if (btnBooths) btnBooths.className = 'flex-1 py-2 rounded-lg bg-white shadow-xs text-emerald-800 font-black';
+        if (btnMenus) btnMenus.className = 'flex-1 py-2 rounded-lg text-slate-600 hover:text-slate-900';
+        if (paneBooths) paneBooths.classList.remove('hidden');
+        if (paneMenus) paneMenus.classList.add('hidden');
+      }
+    }
+
+    function renderFavMenuCalculator() {
+      const container = document.getElementById('fav-menu-items-container');
+      const countEl = document.getElementById('fav-total-count');
+      const priceEl = document.getElementById('fav-total-price');
+
+      if (!container) return;
+
+      if (favoriteMenus.length === 0) {
+        container.innerHTML = `
+          <div class="py-8 text-center text-xs text-slate-500 font-medium space-y-1">
+            <p>아직 찜한 메뉴가 없습니다.</p>
+            <p class="text-[11px] text-slate-400">주막 또는 푸드트럭 메뉴에서 ♥ 하트를 눌러 예산을 계산해보세요!</p>
+          </div>
+        `;
+        if (countEl) countEl.innerText = '0개';
+        if (priceEl) priceEl.innerText = '0원';
+        return;
+      }
+
+      let totalSum = 0;
+      let totalItems = 0;
+
+      container.innerHTML = favoriteMenus.map(it => {
+        const itemTotal = (it.numericPrice || 0) * (it.count || 1);
+        totalSum += itemTotal;
+        totalItems += (it.count || 1);
+        const safeBoothName = it.boothName.replace(/'/g, "\\'");
+        const safeMenuName = it.menuName.replace(/'/g, "\\'");
+
+        return `
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[10px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 rounded-md">${it.boothName}</span>
+                <div class="font-bold text-slate-900 text-xs mt-1">${it.menuName}</div>
+              </div>
+              <button onclick="toggleMenuFav('${it.boothId}', '${safeBoothName}', '${safeMenuName}')" class="text-slate-400 hover:text-rose-500 text-xs p-1">
+                ✕
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between border-t border-slate-200/80 pt-2 text-xs">
+              <span class="text-slate-500 font-mono">${it.price}</span>
+              <div class="flex items-center gap-2">
+                <div class="inline-flex items-center rounded-lg border border-slate-300 bg-white">
+                  <button onclick="updateMenuCount('${it.boothId}', '${safeMenuName}', -1)" class="px-2 py-0.5 text-slate-600 hover:bg-slate-100 font-bold">-</button>
+                  <span class="px-2 font-bold font-mono text-emerald-800 text-xs">${it.count || 1}</span>
+                  <button onclick="updateMenuCount('${it.boothId}', '${safeMenuName}', 1)" class="px-2 py-0.5 text-slate-600 hover:bg-slate-100 font-bold">+</button>
+                </div>
+                <span class="font-black text-emerald-700 font-mono w-16 text-right">${itemTotal.toLocaleString()}원</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (countEl) countEl.innerText = `${totalItems}개`;
+      if (priceEl) priceEl.innerText = `${totalSum.toLocaleString()}원`;
+    }
+
+    function renderFavBoothsList() {
+      const container = document.getElementById('fav-booth-items-container');
+      if (!container) return;
+      if (favorites.length === 0) {
+        container.innerHTML = `<div class="py-8 text-center text-xs text-slate-500 font-medium">아직 찜한 부스가 없습니다.<br>마음에 드는 주막이나 푸드트럭을 찜해보세요!</div>`;
+      } else {
+        const items = BOOTHS.filter(b => favorites.includes(b.id));
+        container.innerHTML = items.map(it => `
+          <div onclick="closeFavModal(); openBoothModal('${it.id}');" class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between cursor-pointer hover:border-emerald-500 hover:bg-emerald-50/40 transition shadow-xs">
+            <div>
+              <div class="font-bold text-slate-900 text-xs">${it.name}</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">${it.concept || ''}</div>
+            </div>
+            <span class="text-rose-500 text-sm">♥</span>
+          </div>
+        `).join('');
+      }
+    }
+
+    function copyBudgetList(evt) {
+      if (favoriteMenus.length === 0) return;
+      let text = `[2026 상록대동제 : 바람 - 내 예상 메뉴 & 예산]\n\n`;
+      let totalSum = 0;
+      favoriteMenus.forEach((it, idx) => {
+        const itemTotal = (it.numericPrice || 0) * (it.count || 1);
+        totalSum += itemTotal;
+        text += `${idx + 1}. [${it.boothName}] ${it.menuName} x${it.count || 1} = ${itemTotal.toLocaleString()}원\n`;
+      });
+      text += `\n💵 총 예상 가격: ${totalSum.toLocaleString()}원`;
+
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      const btn = evt ? evt.currentTarget : null;
+      if (btn) {
+        const oldText = btn.innerHTML;
+        btn.innerHTML = `<span>✅ 클립보드 복사 완료!</span>`;
+        setTimeout(() => { btn.innerHTML = oldText; }, 2000);
+      }
+    }
+
+    const btnOpenFavs = document.getElementById('btn-open-favs');
+    if (btnOpenFavs) {
+      btnOpenFavs.addEventListener('click', () => {
+        renderFavMenuCalculator();
+        renderFavBoothsList();
+        const modal = document.getElementById('fav-modal');
+        if (modal) modal.classList.remove('hidden');
+      });
+    }
+
+    function closeFavModal() {
+      const modal = document.getElementById('fav-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+    function closeFavModalOnBg(e) {
+      if (e.target.id === 'fav-modal') closeFavModal();
+    }
+
+    renderPubsList();
+    renderFoodtrucksList();
+    updateFavBadge();
+  </script>
+</body>
+</html>
